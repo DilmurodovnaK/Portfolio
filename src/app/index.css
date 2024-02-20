@@ -1,0 +1,90 @@
+                @tailwind base;
+                @tailwind components;
+                @tailwind utilities;
+                @media screen and (max-width: 940px) {
+                    .cube {
+                        display: none;
+                    }
+                    .container {
+                        display: none;
+                    }
+                }
+                
+                a.active {
+                    padding-bottom: 2px;
+                    border-bottom: 2px solid #405566;
+                    color: #405566;
+                    background-color: black;
+                }
+                /* .main {
+                    background-image: url("../components/header/img2.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 700px;
+                    padding-top: 60px;
+                } */
+                
+                .container {
+                    perspective: 800px;
+                    width: 400px;
+                    height: 250px;
+                }
+                
+                .cube {
+                    width: 300px;
+                    height: 200px;
+                    position: relative;
+                    transform-style: preserve-3d;
+                }
+                
+                .side {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: red;
+                    opacity: 0.6;
+                }
+                
+                .front {
+                    transform: rotateY(0deg) translateZ(100px);
+                    background-color: #064663;
+                }
+                
+                .right {
+                    transform: rotateY(90deg) translateZ(100px);
+                    background-color: #39d8b8;
+                }
+                
+                .back {
+                    transform: rotateY(180deg) translateZ(100px);
+                    background-color: #064663;
+                }
+                
+                .left {
+                    transform: rotateY(-90deg) translateZ(100px);
+                    background-color: #8855ff;
+                }
+                
+                .top {
+                    transform: rotateX(90deg) translateZ(100px);
+                    background-color: #01080c;
+                }
+                
+                .bottom {
+                    transform: rotateX(-90deg) translateZ(100px);
+                    background-color: #131e67;
+                }
+                
+                .app {
+                    font-family: sans-serif;
+                    text-align: center;
+                    width: 100vw;
+                    height: 100vh;
+                    display: flex;
+                    place-content: center;
+                    place-items: center;
+                    margin: 0;
+                    padding: 0;
+                    perspective: 1000px;
+                    overflow: hidden;
+                }
